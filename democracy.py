@@ -61,7 +61,6 @@ async def create_motion(category, action, data, hidden_data):
     await motion_message.add_reaction("👎")
     pass
 
-class MotionObject
 
 motion_group = app_commands.Group(name="motion", description="Create a motion for a moderator action, such as adding a channel.")
 tree.add_command(motion_group, guild=discord.Object(id=GUILD_ID))
@@ -92,4 +91,4 @@ async def ban_user(self: discord.Interaction, user:discord.User):
     pass
 
 #os.getenv('BOTTOKEN')
-client.run('MTA2MDQwMjkzMzc3MjA3NTA1OA.Gbb8kY.qX3WZbMpFnyicsHgn36x1Xo3WfXrayKA3S-4j0')
+client.run('')

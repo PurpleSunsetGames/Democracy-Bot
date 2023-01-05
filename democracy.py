@@ -54,13 +54,15 @@ async def create_motion(category, action, data, hidden_data):
     motion_string = f'Category: {category}\nAction: {action}\n'
     for i in data:
         motion_string += f'{i}: {data[i]}\n'
-
     motion_message = await motion_channel.send(motion_string)
-    motion_message.id
     await motion_message.add_reaction("👍")
     await motion_message.add_reaction("👎")
     pass
 
+
+class MotionClass:
+    def __init__(self, motion_message, ):
+        pass
 
 motion_group = app_commands.Group(name="motion", description="Create a motion for a moderator action, such as adding a channel.")
 tree.add_command(motion_group, guild=discord.Object(id=GUILD_ID))

@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 GUILD_ID = 1054879203637612544
+MOTION_CHANNEL_ID = 1054913273448890408
 load_dotenv(Path(str(os.getcwd()) + "\\token.env"))
 
 
@@ -47,7 +48,7 @@ async def test(self: discord.Interaction):
 # | - bot
 # |
 async def create_motion(category, action, data):
-    motion_channel = client.get_channel(1054913273448890408)
+    motion_channel = client.get_channel(MOTION_CHANNEL_ID)
     motion_string = f'Category: {category}\nAction: {action}\n'
     for i in data:
         motion_string += f'{i}: {data[i]}\n'
